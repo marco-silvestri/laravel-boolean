@@ -22,7 +22,7 @@ class StudentController extends Controller
         if (!$student){
             abort(404, 'Student not found');
         }
-        return view('students.show');
+        return view('students.show', compact('student'));
     }
 
     private function checkId($id, $data){

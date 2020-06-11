@@ -48,7 +48,7 @@ return [
         'id' => 5,
         'img' =>'https://www.boolean.careers/images/students/ortenzi.png',
         'nome' => 'Daniela Ortenzi',
-        'eta' => 27,
+        'eta' => 27, 
         'genere' => 'f',
         'azienda' => 'RDS',
         'ruolo' => 'Web developer',

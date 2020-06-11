@@ -1,0 +1,25 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    .navbar-brand{
+        color: $blue;
+        text-decoration: none;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: .875em;
+            color: $blue;
+            border-bottom: 2px solid transparent;
+            &active,
+            &:hover{
+                border-color: $green;
+            }
+        }
+    }
+}

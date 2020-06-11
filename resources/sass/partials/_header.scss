@@ -16,7 +16,7 @@
             font-size: .875em;
             color: $blue;
             border-bottom: 2px solid transparent;
-            &active,
+            &.active,
             &:hover{
                 border-color: $green;
             }

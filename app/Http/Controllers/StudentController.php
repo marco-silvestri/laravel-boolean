@@ -18,6 +18,19 @@ class StudentController extends Controller
     }
 
     public function show($id){
-        return view('students.show', compact('id'));
+        $student = $this->checkId($id, $this->students);
+        if (!$student){
+            abort(404, 'Student not found');
+        }
+        return view('students.show');
+    }
+
+    private function checkId($id, $data){
+        foreach ($data as $datum){
+            if ($datum['id'] == $id){
+                return $datum;
+            }
+        }
+        return false;
     }
 }

@@ -16,10 +16,12 @@ h4,
 h5,
 h6 {
   margin: 2rem;
+  font-family: "Rubik", sans-serif;
 }
 
 p {
   margin-bottom: 1rem;
+  font-family: "Rubik", sans-serif;
 }
 
 .main-content {
@@ -53,7 +55,7 @@ p {
   border-bottom: 2px solid transparent;
 }
 
-.navbar ul aactive,
+.navbar ul a.active,
 .navbar ul a:hover {
   border-color: lightgreen;
 }

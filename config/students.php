@@ -69,7 +69,7 @@ return [
         ]
     ],
     'genders' => [
-    'All',
+    'all',
     'm',
     'f'
     ]

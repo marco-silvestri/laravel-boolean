@@ -16,11 +16,11 @@ class StudentController extends Controller
 
     public function index(){
         $data = [
-            $students = $this->students,
-            $genders = $this->genders
+            'students' => $this->students,
+            'genders' => $this->genders
         ];
         
-        return view('students.index', compact('data'));
+        return view('students.index', $data);
     }
 
     public function show($id){

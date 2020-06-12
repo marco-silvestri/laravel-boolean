@@ -4,6 +4,7 @@
 
     <h1>I nostri studenti dopo il corso</h1>
     <div class="students-filter">
+        
         <select name="filter" id="filter">
             @foreach ($genders as $gender)
                 <option value="{{ $gender }}">    

@@ -15,7 +15,7 @@
     </div>
 
     @foreach ($students as $student) 
-    <a href="{{ route('students.show', ['id'=> $student['id']]) }}" class="student">
+    <a href="{{ route('students.show', ['slug'=> $student['slug']]) }}" class="student">
         <header>
             <img src="{{ $student['img'] }}" alt="{{ $student['nome'] }}">
             <div class="info">

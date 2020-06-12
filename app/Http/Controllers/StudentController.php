@@ -23,17 +23,17 @@ class StudentController extends Controller
         return view('students.index', $data);
     }
 
-    public function show($id){
-        $student = $this->checkId($id, $this->students);
+    public function show($slug){
+        $student = $this->checkId($slug, $this->students);
         if (!$student){
             abort(404, 'Student not found');
         }
         return view('students.show', compact('student'));
     }
 
-    private function checkId($id, $data){
+    private function checkId($slug, $data){
         foreach ($data as $datum){
-            if ($datum['id'] == $id){
+            if ($datum['slug'] == $slug){
                 return $datum;
             }
         }

@@ -18,5 +18,5 @@ Route::get('/privacy', 'StaticPageController@privacy')->name('static-page.privac
 Route::get('/faq', 'StaticPageController@faq')->name('static-page.faq');
 
 Route::get('/students', 'StudentController@index')->name('students.index');
-Route::get('/students/show/{id}', 'StudentController@show')->name('students.show');
+Route::get('/students/show/{slug}', 'StudentController@show')->name('students.show');
 

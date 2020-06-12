@@ -5,35 +5,33 @@ $(document).ready(function(){
     var filter = $('#filter'),
         apiUrl = window.location.protocol + '//' + window.location.host + '/api/students/genders';
 
-    var destination = $('.students');
+    var destination = $('.student-container');
 
     var source = $('#student-template').html();
     var template = Handlebars.compile(source);
 
     filter.on('change', function() {
         var gender = $(this).val();
-
         $.ajax({
-            url: apiurl,
+            url: apiUrl,
             method: 'POST',
             data: {
                 filter: gender
             }  
         }).done(function(res){ 
+            //reset view
+            destination.html('');
             if (res.response.length > 0) {
-                //reset view
-                destination.html('');
-
                 for (var i = 0; i < res.response.length; i++){
                     var thisItem = res.response[i];
                     var dataTemplate = {
-                        slug : item.slug,
-                        img : item.img,
-                        nome : item.nome,
-                        assunzione : (item.genere == 'm') ? 'Assunto' : 'assunta', //Operatore ternario 
-                        azienda : item.azienda,
-                        ruolo : item.ruolo,
-                        descrizione : item.descrizione
+                        slug : thisItem.slug,
+                        img : thisItem.img,
+                        nome : thisItem.nome,
+                        assunzione : (thisItem.genere == 'm') ? 'Assunto' : 'assunta', //Operatore ternario 
+                        azienda : thisItem.azienda,
+                        ruolo : thisItem.ruolo,
+                        descrizione : thisItem.descrizione
                     }
                     var output = template(dataTemplate);
                     destination.append(output);

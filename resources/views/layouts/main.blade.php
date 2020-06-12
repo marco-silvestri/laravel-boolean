@@ -4,4 +4,5 @@
         @yield('main-content')
 </main>
 
+@yield('scripts')
 @include('shared.footer')

@@ -3,6 +3,16 @@
 @section('main-content')
 
     <h1>I nostri studenti dopo il corso</h1>
+    <div class="students-filter">
+        <select name="filter" id="filter">
+            @foreach ($genders as $gender)
+                <option value="{{ $gender }}">    
+                @if ($gender == 'm') Uomo @elseif ($gender == 'f') Donna @else Tutti @endif
+            </option>
+            @endforeach
+        </select>
+    </div>
+
     @foreach ($students as $student) 
     <a href="{{ route('students.show', ['id'=> $student['id']]) }}" class="student">
         <header>
@@ -17,3 +27,11 @@
     @endforeach
 
 @endsection
+
+{{--
+@include('shared.handlebars.student')
+
+@section('scripts')
+    <script src="{{ assets('js/app.js') }}"></script>
+@endsection
+--}}

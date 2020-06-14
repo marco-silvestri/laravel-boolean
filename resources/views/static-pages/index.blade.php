@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('main-content')
-    <div class="jumbo">
+    <div class="jumbo d-flex justify-content-between align-items-center">
         <div class="jumbo-text">
             <h1>Diventa sviluppatore web</h1>
             <h2>Trasformiamo la tua passione in una carriera. Se non trovi lavoro, ti rimborsiamo.</h2>

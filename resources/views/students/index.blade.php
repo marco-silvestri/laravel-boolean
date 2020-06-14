@@ -14,8 +14,9 @@
         </select>
     </div>
 
-    <div class="student-container">
-    @foreach ($students as $student) 
+    <div class="student-container">   
+    {{-- THIS IS NOW HANDLED BY JS
+        @foreach ($students as $student) 
     <a href="{{ route('students.show', ['slug'=> $student['slug']]) }}" class="student">
             <img src="{{ $student['img'] }}" alt="{{ $student['nome'] }}">
             <div class="info">
@@ -24,7 +25,7 @@
             </div>
         <p>{{ $student['descrizione'] }}</p>
     </a>
-    @endforeach
+    @endforeach --}}
     </div>
 @endsection
 

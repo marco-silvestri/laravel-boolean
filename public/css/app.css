@@ -10965,6 +10965,19 @@ p {
   width: 200px;
 }
 
+.students {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.students .student {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;

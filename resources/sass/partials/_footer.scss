@@ -1,0 +1,12 @@
+.main-footer{
+    width: 100%;
+    background-color: $green;
+    justify-content: space-around;
+    .nav-footer{
+        display: flex;
+    }
+    ul {
+        list-style: none;
+        margin-left: 2rem;
+    }
+}

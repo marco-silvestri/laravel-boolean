@@ -3,9 +3,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    border-bottom: 3px solid $blue;
     .navbar-brand{
         color: $blue;
         text-decoration: none;
+        img {
+            height: 80px;
+            width: 250px;
+        }
     }
     ul{
         display: flex;
@@ -13,7 +18,8 @@
         a {
             text-decoration: none;
             text-transform: uppercase;
-            font-size: .875em;
+            font-size: 1em;
+            margin: 1em;
             color: $blue;
             border-bottom: 2px solid transparent;
             &.active,
